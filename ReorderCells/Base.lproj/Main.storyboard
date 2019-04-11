@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hgq-Df-fXj">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="caT-zU-Hfs">
+            <objects>
+                <viewController id="Hgq-Df-fXj" customClass="ViewController" customModule="ReorderTableViewCells" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gIE-kl-uHA"/>
+                        <viewControllerLayoutGuide type="bottom" id="uq6-b1-g1e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mw1-RF-EtL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FxO-8X-Kyl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Vx8-fZ-aUr">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vx8-fZ-aUr" id="51L-rO-jzG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hgq-Df-fXj" id="Uqn-wv-EG2"/>
+                                    <outlet property="delegate" destination="Hgq-Df-fXj" id="RQm-om-geI"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ss-9h-l4b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1OA-Ph-0ka"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Numbers" id="vaM-20-Yk1">
+                                        <barButtonItem key="rightBarButtonItem" title="edit" id="mk2-R4-kpf">
+                                            <connections>
+                                                <action selector="edit:" destination="Hgq-Df-fXj" id="217-mz-Pwt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ss-9h-l4b" firstAttribute="leading" secondItem="Mw1-RF-EtL" secondAttribute="leading" id="2bq-Vz-Qiy"/>
+                            <constraint firstAttribute="trailing" secondItem="4ss-9h-l4b" secondAttribute="trailing" id="DMf-oL-PAo"/>
+                            <constraint firstAttribute="trailing" secondItem="FxO-8X-Kyl" secondAttribute="trailing" id="Hcd-YT-fGP"/>
+                            <constraint firstItem="FxO-8X-Kyl" firstAttribute="top" secondItem="4ss-9h-l4b" secondAttribute="bottom" id="OdA-q8-Q3E"/>
+                            <constraint firstItem="uq6-b1-g1e" firstAttribute="top" secondItem="FxO-8X-Kyl" secondAttribute="bottom" id="e5c-Z3-HkG"/>
+                            <constraint firstItem="FxO-8X-Kyl" firstAttribute="leading" secondItem="Mw1-RF-EtL" secondAttribute="leading" id="iYc-0E-Upm"/>
+                            <constraint firstItem="4ss-9h-l4b" firstAttribute="top" secondItem="gIE-kl-uHA" secondAttribute="bottom" id="txh-Io-qcQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hBB-bB-1n2"/>
+                    </view>
+                    <connections>
+                        <outlet property="editButton" destination="mk2-R4-kpf" id="X5k-vX-yrr"/>
+                        <outlet property="myTableView" destination="FxO-8X-Kyl" id="rul-uw-Zl7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ls-BH-a2r" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
